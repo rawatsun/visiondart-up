@@ -1,0 +1,1 @@
+ <div class="footer"><p> All rights are reserved </p></div>
