@@ -21,7 +21,7 @@
 
 
 		}
-		function selectFromTable ( $_tableName , $arrayofcolumn,$arrayofcolumnwhere ,$arrayofcolumnorderby ,$arrayofcolumngroupby )
+		function selectFromTable ( $_tableName , $arrayofcolumn="",$arrayofcolumnwhere ="",$arrayofcolumnorderby="" ,$arrayofcolumngroupby="" )
 		{
 
 			$and="and";
@@ -69,10 +69,18 @@
 			$this->_tableName= $_tableName;
 			$this->query=$this->con -> prepare("select $arrayofcolumn from $this->_tableName $str $groupby $orderby ");
 			$this->query->execute();
-		//	echo "select $arrayofcolumn from $this->_tableName $str $groupby $orderby ";
-		
-			
-			var_dump($this->query->fetch());
+			//echo "select $arrayofcolumn from $this->_tableName $str $groupby $orderby ";
+			if ($this->query->fetch()) {
+				return  'You are logged in';
+
+			}
+			else
+			{
+				return  'You are not logged in';
+
+			}
+				
+		//	var_dump($this->query->fetch());
 		}
 
 		function insertIntoTable($_tableName,$arrayofcolumninsert) 
