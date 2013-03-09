@@ -1,9 +1,3 @@
-<?php 
-  $err = "";
-  if (isset($_GET['id'])){
-    $err = $_GET['id'];
-  }
- ?>
 <dt>LOGIN</dt>
 
         <dd>

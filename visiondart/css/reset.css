@@ -58,12 +58,12 @@ dd {
 }
 
 dt {
-    border-bottom: 1px #FFF solid;
-    border-top: 1px #FFEB46 solid;
+    border-bottom: 1px #E4E464 solid;
+    border-top: 1px #F8F878 solid;
     padding: 20px;
     position: relative;
-    color: black;
-    background-color: #FFEB46;
+    color: white;
+    background-color: #B2B232;
     font-size: 1.5em;
 
     clear: both;
@@ -71,7 +71,7 @@ dt {
 
 dt:hover {
     cursor: pointer;
-    background-color: #FFF550;
+    background-color: #E4E464;
 }
 
 
@@ -232,16 +232,21 @@ h1 {
 }
 
 input[type=text],.sel {
-    border: 1px solid #FFAF0A;
+    border: 1px solid #C3C3C3;
     height: 30px;
     margin: -10px;
     float: right;
     width: 50%;
+    border-radius: 5px;
+    font-family: verdana ;
+    font-size: 1.2em;
+    color:#919191;
+
 }
 
 input[type=text]:hover {
-    border: 1px solid #FFEB46;
-    background-color: #F0F5F0;
+    border: 1px solid black ;
+
 }
 
 #b1 {
@@ -323,10 +328,10 @@ overflow: hidden;
                   {
          }
 .header {
-    background-color:black;
+    background-color:#617C58;
     border: none;
     padding: 15px;
-    height: 50px
+    height: 40px;
     color: #E1E1E1;
     font-family: SketchRockwell-Bold, verdana;
     font-style: bold;
@@ -380,7 +385,7 @@ a:hover {
 
 .footer{
     position: absolute;
-    background-color:#5A5A5A;
+    background-color:#B38F14;
     height:50px;
     bottom: 0;
     width: 100%;

@@ -1,6 +1,6 @@
 <div class="header">
 
-       <img alt="" src="images/logo1.png" height="35" width="55"/>
+       <img alt="" src="images/logo1.png" height="70" width="85" style="margin-top:-16px"/>
 
 
         <div class="icon">

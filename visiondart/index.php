@@ -31,8 +31,6 @@
 
     <dl>
 
-        home
-
         <?php include_once('main-websit-eresource/home.php'); ?>
 
         <?php include_once('main-websit-eresource/about.php'); ?>

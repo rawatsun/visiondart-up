@@ -6,7 +6,7 @@
 <?php 
 
 $user_name		 = $_REQUEST['user_name'];
-$password  		 = $_REQUEST['password'];
+$password  		 = md5($_REQUEST['password']);
 $user_name	     = "'".$user_name."'";
 $password	     = "'".$password."'";
  ?>
