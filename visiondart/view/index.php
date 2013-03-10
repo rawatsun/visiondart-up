@@ -9,7 +9,7 @@ $user_name		 = $_REQUEST['user_name'];
 $password  		 = md5($_REQUEST['password']);
 $user_name	     = "'".$user_name."'";
 $password	     = "'".$password."'";
- ?>
+?>
 
 <?php
 /*  object of the the class DbConnection is created */

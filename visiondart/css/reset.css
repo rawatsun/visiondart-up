@@ -250,19 +250,36 @@ input[type=text]:hover {
 }
 
 #b1 {
-    color: #000;
+    color: white;
     height: 40px;
     width: 100px;
     float: right;
-    margin-right: 0;
-    background-color: #F0F5F0;
+    text-align: center;
+    background-color: #B2B232;
     border: 1px solid #8C918C;
+    border-radius: 4px;
     font-family: verdana;
+    font-size: 1.1em;
+    
+  font-weight: bold;
+ 
+font-style: italic;
+}
+#p1{
+  width: 30%;
+  float: left;
+  margin-left: 500px;
+  margin-top: 20px;
+  font-size: 1.3em;
+  font-family: verdana;
+  font-weight: bold;
+  color: red;
+font-style: italic;
 }
 
 #b1:hover {
-    background-color: #B8D0C0;
-    color: #FFF;
+    background-color: #c2c232;
+    color: #FAFAFA;
     cursor: pointer;
 }
 
