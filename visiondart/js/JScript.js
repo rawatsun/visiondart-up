@@ -187,20 +187,18 @@ else
             url: 'view/index.php',                        
             data: "user_name="+user_name+"&password="+password+"",                       
              beforeSend: function() {
-            
+             
     
               },
              success: function(data){
            //   $('#p1').html().remove().html(data);
-           if (data == "You are not logged in"){
+            //$('#p1').text(data).hide().fadeIn("3000");
+           
+           if ($.trim(data) == 'You are not logged in'){
 
-
-            $('#p1').text(data).hide().fadeIn("3000");
-          }
-          else
-          {
-
-    window.location.href = "dashboard/user-dashboard.php";
+            $('#p1').text("You are not logged in").hide().fadeIn("3000");
+          } else {
+          window.location.href = "dashboard/user-dashboard.php";
           }  
             
               },
