@@ -241,7 +241,21 @@ input[type=text],.sel {
     font-family: verdana ;
     font-size: 1.2em;
     color:#919191;
-
+    font-weight: bold; 
+    font-style: italic;
+}
+.textarea{
+    border: 1px solid #C3C3C3;
+    height: 70px;
+    margin: -10px;
+    float: right;
+    width: 50%;
+    border-radius: 4px;
+    font-family: verdana ;
+    font-size: 1.2em;
+    color:#919191;
+    font-weight: bold; 
+    font-style: italic;
 }
 
 input[type=text]:hover {
@@ -266,15 +280,18 @@ input[type=text]:hover {
 font-style: italic;
 }
 #p1{
+    text-align: center;
   width: 30%;
   float: left;
-  margin-left: 500px;
-  margin-top: 20px;
+  margin-left: 400px;
+  margin-top: 80px;
   font-size: 1.3em;
   font-family: verdana;
-  font-weight: bold;
   color: red;
+   border-radius: 4px;
 font-style: italic;
+height: 36px;
+border: 1px red solid;
 }
 
 #b1:hover {
