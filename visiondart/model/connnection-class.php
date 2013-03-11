@@ -70,8 +70,6 @@
 			//echo "select $arrayofcolumn from $this->_tableName $str $groupby $orderby ";
 			if ($row=$this->query->fetch()) {
 				return $row['user_name']; 
-				
-
 			}
 			else
 			{
