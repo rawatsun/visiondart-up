@@ -15,6 +15,8 @@
                 "text" /></label> <label class="label1">DOB<input id="reg_dob"
                 name="dob" type="text" /></label> <label class=
                 "label1">Age<input id="reg_age" name="age" type="text" /></label>
+                <label class=
+                "label1">Age<input id="reg_gender" name="age" type="text" /></label>
                 <label class="label1">Country&nbsp;&nbsp;<select class="sel" id="reg_country">
                     <option>
                         India
@@ -35,7 +37,7 @@
                     <option>
                         france
                     </option>
-                </select></label> <input id="b1" onclick="validate()" type=
+                </select></label> <input id="b1" onclick="register()" type=
                 "button" value="Save" />
             </div>
 

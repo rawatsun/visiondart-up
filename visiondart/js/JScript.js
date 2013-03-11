@@ -213,7 +213,29 @@ else
 
 
 // - ------------------------------------------- End validate login/varify authenticaion ajax-------------------------------    
+function register () {
+                 reg_user_name    =   $("#reg_user_name").val();
 
+                  reg_password    =  $("#reg_password").val();
+
+                   reg_confirm_password   =  $("#reg_confirm_password").val();
+
+                      reg_first_name = $("#reg_first_name").val();
+
+                    reg_last_name  =  $("#reg_last_name").val();
+
+                     reg_email  = $("#reg_email").val();
+
+                 reg_address   =    $("#reg_address").val();
+
+                  reg_phone    =  $("#reg_phone").val();
+
+                   reg_dob    = $("#reg_dob").val();
+
+                      reg_age  =$("#reg_age").val();
+                      alert(reg_age);
+
+}
 
 
 

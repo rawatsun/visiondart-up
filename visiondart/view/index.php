@@ -4,11 +4,37 @@
  ?>
 
 <?php 
+if (isset($_REQUEST['user_name']) && isset($_REQUEST['password']))
+{
 
 $user_name		 = $_REQUEST['user_name'];
 $password  		 = md5($_REQUEST['password']);
 $user_name	     = "'".$user_name."'";
 $password	     = "'".$password."'";
+}
+
+
+if (isset($_REQUEST['reg_user_name']) && isset($_REQUEST['reg_password']) &&
+isset($_REQUEST['reg_first_name']) && isset($_REQUEST['reg_last_name']) && 
+isset($_REQUEST['reg_email']) && isset($_REQUEST['reg_address']) &&
+isset($_REQUEST['reg_phone']) && isset($_REQUEST['reg_dob'])&&
+isset($_REQUEST['reg_age']) && isset($_REQUEST['reg_country']) && isset($_REQUEST['reg_gender'])) {
+
+		$reg_user_name = "'" .$_REQUEST['reg_user_name']. "'";
+		$reg_password = "'".$_REQUEST['reg_password']. "'";
+		$reg_first_name = "'".$_REQUEST['reg_first_name']. "'";
+		$reg_last_name = "'".$_REQUEST['reg_last_name']. "'";
+		$reg_email= "'" .$_REQUEST['reg_email']."'";
+		$reg_address= "'" .$_REQUEST['reg_address']."'";
+		$reg_phone= "'".$_REQUEST['reg_phone']. "'";
+		$reg_dob= "'".$_REQUEST['reg_dob']. "'";
+		$reg_age= "'" .$_REQUEST['reg_age']."'";
+
+		$reg_gender = "'" .$_REQUEST['reg_gender']."'";	
+		$reg_country = "'" .$_REQUEST['reg_country']."'";		
+}
+
+
 ?>
 
 <?php
@@ -61,7 +87,25 @@ if ($result == 'You are not logged in'){
 	 echo ' ';
 }
 /*2. cloumn name with the values to insert */
-//$arrayofcolumninsert = array('id' =>'"400"' , 'name' => '"suraj"' , 'laname' => '"rawat"');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$arrayofcolumninsert = array('user_id' =>$reg_user_name, 'password' => $reg_password
+	, 'first_name' => $reg_first_name, 'last_name' => $reg_last_name, 'gender' => $reg_gender
+	, 'date_of_birth' => $reg_dob, 'phone' => $reg_phone
+	, 'address' => $reg_address, 'country' => $reg_country, 'date_of_registration' => '"null"',
+	 'date_of_deletion' => '""', 'email_id' => $reg_email, 'page_link' => '""');
 //$arrayofcolumninsert = array('key' =>'"values"');
 
 
@@ -71,7 +115,7 @@ call to the function  to insert the data into the table . function takes 2 argum
 2. cloumn name with the values to insert
 */
 //$dbconnection -> insertIntoTable("variables",$arrayofcolumninsert);
-//$dbconnection -> insertIntoTable("tablename",$arrayofcolumninsert);
+$dbconnection -> insertIntoTable("users",$arrayofcolumninsert);
 
 
 
