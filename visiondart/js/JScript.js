@@ -1,11 +1,76 @@
-﻿ topvalue = 0;
+﻿
+
+ topvalue = 0;
  textval = 0;
 
 $(document).ready(function() {
-    var topvalue = 0;
 
-    
-    
+
+ 
+var topvalue = 0;
+$('#p1').hide();
+
+
+
+$("#user_name,#password").mouseover( function(){
+if($(this).val() == "Invalid")  {
+$(this).css("background-color","white");
+$("#user_name").css({"color":"black"});
+$("#password").css({"color":"black"});
+$(this).val("");
+}
+else
+{
+$(this).css("background-color","white");
+$("#user_name").css({"color":"black"});
+$("#password").css({"color":"black"});
+}
+});
+
+
+$("#contact_suggestion,#contact_email,#contact_name").mouseover( function(){
+if($(this).val() == "Invalid")  {
+$(this).css("background-color","white");
+$("#contact_suggestion").css({"color":"black"});
+$("#contact_email").css({"color":"black"});
+
+$("#contact_name").css({"color":"black"});
+$(this).val("");
+}
+else
+{
+$(this).css("background-color","white");
+$("#contact_suggestion").css({"color":"black"});
+$("#contact_email").css({"color":"black"});
+
+$("#contact_name").css({"color":"black"});
+}
+});
+
+
+  /*  $("#reg_user_name")
+
+                        $("#reg_password")
+
+                        $("#reg_confirm_password")
+
+                        $("#reg_first_name")
+
+                        $("#reg_last_name")
+
+                        $("#reg_email")
+
+                        $("#reg_address")
+
+                        $("#reg_phone")
+
+                        $("#reg_dob")
+
+                        $("#reg_age")
+                      */
+
+
+// - -------------------------------------------start of code for top window-------------------------------    
 
     $('.top').hide();
       $(window).scroll(function () {
@@ -26,7 +91,15 @@ $(document).ready(function() {
     });
 });
 
+// - -------------------------------------------End of code for top window-------------------------------    
 
+
+
+
+
+
+
+// - -------------------------------------------start of code for slider-------------------------------
 
 
 function slideImage1() {
@@ -83,3 +156,95 @@ function slideImage1() {
 }
     }
     setInterval("slideImage1()", 5000);
+
+
+// - -------------------------------------------End of code for slider-------------------------------
+  
+
+
+
+
+
+
+// - ------------------------------------------- start validate login/varify authenticaion ajax -------------------------------    
+
+
+function checklogin(){
+ user_name = $('#user_name').val();
+ password = $('#password').val(); 
+if ((user_name == "" && password =="") ||(user_name == null && password ==null) ) { 
+$("#user_name").css("background-color","#FF0000");
+i=0;
+$("#password").css("background-color","#FF0000");
+$("#user_name").val("Invalid").css({"opacity":"0.5","color":"white"});
+$("#password").val("Invalid").css({"opacity":"0.5","color":"white"});
+}
+
+else
+{  
+    $.ajax({ 
+            type: "GET",
+            url: 'view/index.php',                        
+            data: "user_name="+user_name+"&password="+password+"",                       
+             beforeSend: function() {
+            
+    
+              },
+             success: function(data){
+           //   $('#p1').html().remove().html(data);
+           if (data == "You are not logged in"){
+
+
+            $('#p1').text(data).hide().fadeIn("3000");
+          }
+          else
+          {
+
+    window.location.href = "dashboard/user-dashboard.php";
+          }  
+            
+              },
+              complete: function () {
+            
+              },
+              error: function() {
+              }
+          });
+}
+}
+
+
+// - ------------------------------------------- End validate login/varify authenticaion ajax-------------------------------    
+
+
+
+
+function validatecontact () {
+
+
+
+contact_name = $('#contact_name').val();
+contact_suggestion = $('#contact_suggestion').val(); 
+contact_email = $('#contact_email').val(); 
+
+if (contact_name == "" || contact_name ==null){
+     $('#contact_name').css("background-color","#FF0000").val("Invalid").css({"opacity":"0.5","color":"white"});;
+
+}
+ if (contact_suggestion== "" || contact_suggestion ==null) {
+    $('#contact_suggestion').css("background-color","#FF0000").val("Invalid").css({"opacity":"0.5","color":"white"});;
+
+}else
+{
+
+}
+ if (contact_email== "" || contact_email ==null) {
+     $('#contact_email').css("background-color","#FF0000").val("Invalid").css({"opacity":"0.5","color":"white"});;
+}else
+{
+
+}
+
+
+
+}
