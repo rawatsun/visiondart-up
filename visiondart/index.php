@@ -12,7 +12,7 @@
              
     -->
 
-    <title>index - faq</title>
+    <title>visiondart - index </title>
     <script src="jquery-lib/jquery-1.8.3.js" type="text/javascript"></script>
     <script src="./js/JScript.js" type="text/javascript"></script>
     <link href="./css/reset.css" rel="stylesheet" />

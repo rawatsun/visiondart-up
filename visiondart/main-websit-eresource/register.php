@@ -2,22 +2,26 @@
 
         <dd>
             <div class=" val">
-                <label class="label1">User Name <input id="user_name" type=
+                <label class="label1">User Name <input id="reg_user_name" type=
                 "text" /></label> <label class="label1">Password <input id=
-                "password" type="text" /></label> <label class="label1">Confirm
-                Password<input id="confirm_password" type="text" /></label>
-                <label class="label1">First Name <input id="first_name" type=
+                "reg_password" type="text" /></label> <label class="label1">Confirm
+                Password<input id="reg_confirm_password" type="text" /></label>
+                <label class="label1">First Name <input id="reg_first_name" type=
                 "text" /></label> <label class="label1">Last Name<input id=
-                "last_name" type="text" /></label> <label class="label1">Email
-                Address <input id="email" type="text" /></label> <label class=
-                "label1">Address <input id="address" type="text" /></label>
-                <label class="label1">Phone Number<input id="phone" type=
-                "text" /></label> <label class="label1">DOB<input id="dob"
+                "reg_last_name" type="text" /></label> <label class="label1">Email
+                Address <input id="reg_email" type="text" /></label> <label class=
+                "label1">Address <input id="reg_address" type="text" /></label>
+                <label class="label1">Phone Number<input id="reg_phone" type=
+                "text" /></label> <label class="label1">DOB<input id="reg_dob"
                 name="dob" type="text" /></label> <label class=
-                "label1">Age<input id="age" name="age" type="text" /></label>
+                "label1">Age<input id="reg_age" name="age" type="text" /></label>
                 <label class="label1">Country&nbsp;&nbsp;<select class="sel">
                     <option>
                         India
+
+
+                    
+
                     </option>
 
                     <option>

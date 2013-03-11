@@ -1,6 +1,4 @@
 <?php 
-	
-
 	class DbConnection 
 	{
 		private $_hostName , $_dbname, $_userName , $_password ,$con ,$query ;
@@ -70,8 +68,9 @@
 			$this->query=$this->con -> prepare("select $arrayofcolumn from $this->_tableName $str $groupby $orderby ");
 			$this->query->execute();
 			//echo "select $arrayofcolumn from $this->_tableName $str $groupby $orderby ";
-			if ($this->query->fetch()) {
-				return  'You are logged in';
+			if ($row=$this->query->fetch()) {
+				return $row['user_name']; 
+				
 
 			}
 			else
@@ -106,55 +105,7 @@
 			}
 		}
 
-		function deleteFromTable($_tableName,$arrayofcolumntodelete) 
-				{
-					$str="";
-					$str2="";
-					$keys="";
-					$values="";
-					if (empty($arrayofcolumntodelete)){
-					$str = "" ;
-					
-					}
-					else {
-					foreach ($arrayofcolumntodelete as $key => $value) {
-					$str .=  $key . "=" .  $value . " and ";
-					}
-					$str = " where " . $str ;
-					$str = substr($str, 0,-4);
-					$this->query=$this->con -> prepare("delete from  $this->_tableName $str");
-					$this->query->execute();
-				//	echo " delete from  $this->_tableName $str";
-					}
-				}
 
-
-
-				function updateToTable($_tableName,$arrayofcolumntoupdate,$arrayofcolumntoupdatewhere) 
-				{
-
-					$str="";
-					$str2="";
-					if (empty($arrayofcolumntoupdate ) && empty($arrayofcolumntoupdatewhere )){
-					$str = "" ;
-					$str2 = "";
-					}
-					else {
-					foreach ($arrayofcolumntoupdate as $key => $value) {
-					$str .=  $key . "=" .  $value . " and ";
-					}
-					$str = substr($str, 0,-4);
-
-					foreach ($arrayofcolumntoupdatewhere as $key => $value) {
-
-					$str2 .=  $key . "=" .  $value . " and ";
-					}
-					 $str2 = substr($str2, 0,-4);
-					$this->query=$this->con -> prepare("update $this->_tableName set $str where $str2");
-					$this->query->execute();
-					//echo "update $this->_tableName set $str where $str2";
-					}
-				}
 				function closeConnection(){
 
 

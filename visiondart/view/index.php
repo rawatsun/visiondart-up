@@ -53,11 +53,16 @@ $arrayofcolumnwhere = array('user_name' =>$user_name,'password'=>$password);
 5. cloumn name to be selected  by group by clause  
 */
 //$dbconnection -> selectFromTable("variables",$arrayofcolumn,$arrayofcolumnwhere,$arrayofcolumnorderby,$arrayofcolumngroupby);
+$result="";
+$result = $dbconnection -> selectFromTable("user_login",$arrayofcolumn,$arrayofcolumnwhere);
+if ($result == "You are not logged in"){
+	echo $result;
+}
+else
+{
+echo $_SESSION['username']  = $result;
 
-echo $dbconnection -> selectFromTable("user_login",$arrayofcolumn,$arrayofcolumnwhere);
-
-
-
+}
 /*2. cloumn name with the values to insert */
 //$arrayofcolumninsert = array('id' =>'"400"' , 'name' => '"suraj"' , 'laname' => '"rawat"');
 //$arrayofcolumninsert = array('key' =>'"values"');
