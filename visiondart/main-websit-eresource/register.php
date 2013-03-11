@@ -15,7 +15,7 @@
                 "text" /></label> <label class="label1">DOB<input id="reg_dob"
                 name="dob" type="text" /></label> <label class=
                 "label1">Age<input id="reg_age" name="age" type="text" /></label>
-                <label class="label1">Country&nbsp;&nbsp;<select class="sel">
+                <label class="label1">Country&nbsp;&nbsp;<select class="sel" id="reg_country">
                     <option>
                         India
 
