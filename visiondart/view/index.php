@@ -1,5 +1,4 @@
 <?php session_start();
-
 	include_once('../model/connnection-class.php');
  ?>
 
@@ -44,7 +43,7 @@ $dbconnection = new DbConnection();
 
 
 /* call to the function  to connect to the host using authentication*/
-$dbconnection -> connectToDatabse("localhost","visiondart","root","");
+$dbconnection -> connectToDatabse("localhost","visiondart","root","root");
 //$dbconnection -> connectToDatabse("hostname","databasename","username","password");
 
 

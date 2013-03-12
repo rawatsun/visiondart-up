@@ -15,35 +15,20 @@ $('#p1').hide();
 $("#user_name,#password").mouseover( function(){
 if($(this).val() == "Invalid")  {
 $(this).css("background-color","white");
-$("#user_name").css({"color":"black"});
-$("#password").css({"color":"black"});
+$(this).css({"color":"black"});
 $(this).val("");
 }
-else
-{
-$(this).css("background-color","white");
-$("#user_name").css({"color":"black"});
-$("#password").css({"color":"black"});
-}
+
+
+
 });
 
 
 $("#contact_suggestion,#contact_email,#contact_name").mouseover( function(){
 if($(this).val() == "Invalid")  {
 $(this).css("background-color","white");
-$("#contact_suggestion").css({"color":"black"});
-$("#contact_email").css({"color":"black"});
-
-$("#contact_name").css({"color":"black"});
+$(this).css({"color":"black"});
 $(this).val("");
-}
-else
-{
-$(this).css("background-color","white");
-$("#contact_suggestion").css({"color":"black"});
-$("#contact_email").css({"color":"black"});
-
-$("#contact_name").css({"color":"black"});
 }
 });
 
@@ -193,7 +178,7 @@ else
              success: function(data){
            //   $('#p1').html().remove().html(data);
             //$('#p1').text(data).hide().fadeIn("3000");
-           
+           alert(data);
            if ($.trim(data) == 'You are not logged in'){
 
             $('#p1').text("You are not logged in").hide().fadeIn("3000");
