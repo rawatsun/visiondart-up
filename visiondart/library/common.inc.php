@@ -27,7 +27,7 @@ function loadView($templateName,$arrPassValue=''){
 
 }
 
-function loadDasboard($templateName,$arrPassValue=''){
+function loadDasboardtemplate($templateName,$arrPassValue=''){
 
          $view_path=VIEW_PATH_DASHB.$templateName;
          if(file_exists($view_path)){

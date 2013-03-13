@@ -8,7 +8,7 @@
    }
 
    function loadDasboard(){
-      loadDasboard('user-dashboard.php');
+      loadDasboardtemplate('user-dashboard.php');
          }
 
       function listing1(){
