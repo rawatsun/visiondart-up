@@ -21,7 +21,7 @@ if(file_exists($fn)){
       require_once($fn);
       $controllerClass=$controller.'Controller';
       if(!method_exists($controllerClass,$function)){
-          die($function .' function not found');
+          header("Location: 404/error.html");
       }
 
       $obj=new $controllerClass;

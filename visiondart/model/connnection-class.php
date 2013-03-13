@@ -98,7 +98,7 @@ function regSelect( $_tableName , $arrayofcolumn="",$arrayofcolumnwhere ="",$arr
 			if ($row=$this->query->fetch()) {
 
 				return  "user already exists";
-			
+
 			}
 			else
 			{
