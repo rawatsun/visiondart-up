@@ -169,7 +169,7 @@ else
 {  
     $.ajax({ 
             type: "GET",
-            url: 'view/index.php',                        
+            url: 'model/index.php',                        
             data: "user_name="+user_name+"&password="+password+"",                       
              beforeSend: function() {
              
@@ -183,7 +183,7 @@ else
 
             $('#p1').text("You are not logged in").hide().fadeIn("3000");
           } else {
-          window.location.href = "dashboard/user-dashboard.php";
+          window.location.href = "./index.php?function=loadDasboard";
           }  
             
               },

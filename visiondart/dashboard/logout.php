@@ -3,7 +3,7 @@
 if (isset($_REQUEST['logout'])){
 	session_destroy();
 	session_unset();
-	header("Location: ../index.php");
+	header("Location: ././isndex.php");
 	exit();
 }
  ?>
