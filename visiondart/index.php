@@ -1,52 +1,33 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php
+include_once($_SERVER['DOCUMENT_ROOT'].'vd-up1/trunk/visiondart/library/common.inc.php');
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!--https://developers.google.com/speed/libraries/devguide-->
-    <!--
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-     <link rel="stylesheet" href="./css/reset.css" />
-              <meta name="viewport" content="width=device-width, initial-scale=1">
-             
-    -->
+if(isset($_GET['controller']) && !empty($_GET['controller'])){
+      $controller =$_GET['controller'];
+}else{
+      $controller ='loadindexfile';  //default controller
+}
 
-    <title>visiondart - index </title>
-    <script src="jquery-lib/jquery-1.8.3.js" type="text/javascript"></script>
-    <script src="./js/JScript.js" type="text/javascript"></script>
-    <link href="./css/reset.css" rel="stylesheet" />
-</head>
+if(isset($_GET['function']) && !empty($_GET['function'])){
+      $function =$_GET['function'];
+}else{
+      $function ='mainViewOfPage';    //default function
+}
 
-<body>
-    <div class="main-container">
-        <?php include_once('main-websit-eresource/top.php') ?>
+$controller=strtolower($controller);
 
+$fn = SITE_ROOT.'controller/'.$controller . '.php';
 
-        <?php include_once('main-websit-eresource/header.php') ?>
+if(file_exists($fn)){
+      require_once($fn);
+      $controllerClass=$controller.'Controller';
+      if(!method_exists($controllerClass,$function)){
+          die($function .' function not found');
+      }
 
+      $obj=new $controllerClass;
+      $obj-> $function();
 
-
-    <div style="clear:both"></div>
-
-    <dl>
-
-        <?php include_once('main-websit-eresource/home.php'); ?>
-
-        <?php include_once('main-websit-eresource/about.php'); ?>
-
-        <?php include_once('main-websit-eresource/service.php'); ?>
-
-        <?php include_once('main-websit-eresource/login.php'); ?>
-       
-        <?php include_once('main-websit-eresource/register.php'); ?>
-
-        <?php include_once('main-websit-eresource/contact.php'); ?>
-
-
-    </dl>
-    
-                <div class="para"></div>
-        <?php include_once('main-websit-eresource/footer.php') ?>
-</div>
-</body>
-</html>
+}else{
+      die($controller .' controller not found');
+}
+?>
