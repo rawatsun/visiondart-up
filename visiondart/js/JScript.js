@@ -197,8 +197,15 @@ function register() {
     reg_country = $("#reg_country").val();
 
     $.ajax({
-        type: "POST",
-        url: 'index.php',
+        type: "GET",
+        url: 'model/index.php',
+        data: "codetorun=registerme&reg_user_name=" + reg_user_name +
+         "&reg_password=" + reg_password + "&reg_first_name=" + reg_first_name + 
+         "&reg_last_name=" + reg_last_name + "&reg_email=" + reg_email + 
+        "&reg_address=" + reg_address + "&reg_phone=" + reg_phone + "&reg_dob=" +
+         reg_dob + "" + "&reg_age=" + reg_age + "&reg_gender=" + reg_gender + "&reg_country=" 
+         + reg_country + "",
+
         beforeSend: function() {
 },
         success: function(data) {
